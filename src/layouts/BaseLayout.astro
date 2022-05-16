@@ -1,4 +1,7 @@
 ---
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+
 const { title, description } = Astro.props;
 ---
 
@@ -14,10 +17,10 @@ const { title, description } = Astro.props;
     <link rel="stylesheet" href="/normalize.css">
 </head>
 <body>
-    <header>Header</header>
+    <Header />
     <main>
         <slot />
     </main>
-    <footer>Footer</footer>
+    <Footer />
 </body>
 </html>
