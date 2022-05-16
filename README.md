@@ -1,43 +1,16 @@
-# Astro Starter Kit: Minimal
+# Astro HTML + SASS Template
 
-```
-npm init astro -- --template minimal
-```
+An extremely barebones Astro template for an HTML site with Sass. You can use this over the empty default template provided by Astro as this template comes pre-built with basic HTML layout foundation.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+This template also includes [normalize.css](https://necolas.github.io/normalize.css/). It is linked in the head of the Base Layout.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### How To Setup
 
-## 🚀 Project Structure
+1. If you have not already, install the official [Astro VSCode Extension](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) for syntax highlighting, TypeScript type information and intellisense.
+2. Clone this repo: `git clone https://github.com/MichaelFarquhar/astro-html-sass-template.git `
 
-Inside of your Astro project, you'll see the following folders and files:
+3. Make any changes needed to **package.json**.
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Sass
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+This template comes with sass installed and all sass can be written in-line inside _.astro_ files.You can do so with the following syntax: `<style lang="scss">`
