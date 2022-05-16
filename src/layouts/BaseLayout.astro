@@ -18,9 +18,45 @@ const { title, description } = Astro.props;
 </head>
 <body>
     <Header />
-    <main>
+    <main class="container">
         <slot />
     </main>
     <Footer />
 </body>
 </html>
+
+<style>
+    html { height: 100%; }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%
+    }
+
+    main { flex: 1; }
+</style>
+
+{/* Global Styles */}
+<style lang="scss" is:global>
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @mixin containerResize($screen-size, $container-size){
+        @media (min-width: $screen-size) {
+            .container {
+                width: $container-size;
+            }
+        }
+    }
+
+    @include containerResize(576px, 540px);
+    @include containerResize(768px, 720px);
+    @include containerResize(992px, 960px);
+    @include containerResize(1200px, 1140px);
+</style>
