@@ -1,0 +1,40 @@
+@mixin center {
+    display: grid;
+    place-items: center;
+}
+
+/**
+ * Set items to flex and space between. 
+ * Option to change alignment, with center being default
+ */
+@mixin space-between($align: center) {
+    display: flex;
+    justify-content: space-between;
+    align-items: $align;
+}
+
+/**
+ * 
+ */
+@mixin gap-space($spacing) {
+    & > * {
+        margin: 0 $spacing;
+    }
+    & > *:first-child {
+        margin-left: 0;
+    }
+    & > *:last-child {
+        margin-right: 0;
+    }
+}
+
+/**
+ * Change to specified color on hover. Includes a transition
+ */
+@mixin hover-color($color) {
+    transition: $hover-transition;
+
+    &:hover {
+        color: $color;
+    }
+}

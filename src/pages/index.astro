@@ -5,3 +5,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Home Page" description="Description for home page">
     <h1>Home Page</h1>
 </BaseLayout>
+
+{/* Global Styles */}
+<style lang="scss" is:global>
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    @mixin containerResize($screen-size, $container-size){
+        @media (min-width: $screen-size) {
+            .container {
+                width: $container-size;
+            }
+        }
+    }
+
+    @include containerResize(576px, 540px);
+    @include containerResize(768px, 720px);
+    @include containerResize(992px, 960px);
+    @include containerResize(1200px, 1140px);
+
+</style>
